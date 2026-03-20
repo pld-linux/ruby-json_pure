@@ -21,9 +21,9 @@ This is a JSON implementation in pure Ruby.
 
 %build
 %__gem_helper spec
-%{__sed} -i -e 's/s.version = .*/s.version = "%{version}"/' %{pkgname}.gemspec
 
 %install
+
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{ruby_vendorlibdir},%{ruby_specdir}}
 cp -a lib/* $RPM_BUILD_ROOT%{ruby_vendorlibdir}
